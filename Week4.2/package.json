@@ -1,0 +1,17 @@
+{
+  "name": "express-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "dev-todo": "node todoApp.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "express": "^4.21.2"
+  }
+}

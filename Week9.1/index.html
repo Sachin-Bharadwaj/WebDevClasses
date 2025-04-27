@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Week9.1</title>
+    </head>
+    <body>
+        <div id="buttonParent">
+        </div>
+    </body>
+    <script>
+        let state = {
+            count: 0
+        }
+
+        function onButtonPress() {
+            state.count = state.count + 1;
+            buttonComponentReRenderer();
+        }
+
+        function buttonComponentReRenderer() {
+            document.getElementById("buttonParent").innerHTML = "";
+            const component = buttonComponent(state.count);
+            document.getElementById("buttonParent").appendChild(component);
+        }
+
+        function buttonComponent(count) {
+            const button = document.createElement("button");
+            button.innerHTML = "Count: " + count;
+            button.setAttribute("onclick", "onButtonPress()");
+            return button;
+        }
+
+        buttonComponentReRenderer();
+    </script>
+</html>
